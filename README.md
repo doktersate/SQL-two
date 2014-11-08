@@ -11,7 +11,7 @@ SQL-two
   select customers.customerid, customers.firstname, customers.lastname, items_ordered.order_date, items_ordered.item,   items_ordered.price from customers, items_ordered where customers.customerid = items_ordered.customerid group by   customers.customerid;
   select customers.customerid, customers.firstname, customers.lastname, items_ordered.order_date, items_ordered.item, items_ordered.price from customers inner join items_ordered on customers.customerid = items_ordered.customerid where customers.customerid = items_ordered.customerid;
   
-4) ??
+4) SELECT min(abs(price-100)),item FROM items_ordered;
 
 5) Select all item that had prices between $50 and $100. Only use items that have both a c and an e in them. 
   select item from items_ordered where item like '%a%' and item like '%c%' and item like '%e%' having price between 50 and 100;
